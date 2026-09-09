@@ -1,0 +1,321 @@
+======================================================================
+[RUN] Whittaker background inversion — ocean5_goodsoil5 — BBO-1
+[RUN] SLURM_JOB_ID=16592871
+[RUN] SLURM_SUBMIT_DIR=/orcd/home/002/jpvelasq/basefolder_JP
+[RUN] SLURM_CPUS_PER_TASK=64
+[RUN] JULIA_NUM_THREADS=64
+[RUN] OPENBLAS_NUM_THREADS=1
+[RUN] Script=new-real-background-inversion-bbo_whittaker_ocean5_goodsoil5_BBO1_FIXED.jl
+[RUN] Target=real_whittaker_selected_background_16_22_for_inversion.h5
+[RUN] Reference=outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean5_goodsoil5_10wg_20080325.jld2
+======================================================================
+Geodesic Distance from WWVB to PLO: 6568.28 km
+Geodesic Distance from WWVB to PIU: 5659.0 km
+Geodesic Distance from NAA to PLO: 6568.28 km
+Geodesic Distance from NAA to PIU: 5659.0 km
+Initial time: 2008-01-10T10:00:00+00:00
+Scenario defined.
+Datetime range: from 2008-01-10 10:00:00 UTC to 2008-01-11 10:00:00 UTC with a length of 289.
+========================================================================================
+Whittaker-background heterogeneous inversion — BBO-1
+Ground case: ocean5_goodsoil5
+GROUND indices, TX -> RX: [10, 10, 10, 10, 10, 7, 7, 7, 7, 7]
+epsilon_r by segment: [81.0, 81.0, 81.0, 81.0, 81.0, 15.0, 15.0, 15.0, 15.0, 15.0]
+sigma [S/m] by segment: [4.0, 4.0, 4.0, 4.0, 4.0, 0.01, 0.01, 0.01, 0.01, 0.01]
+========================================================================================
+Mixed-ground FIRI reference loaded:
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean5_goodsoil5_10wg_20080325.jld2
+  case_key: ocean5_goodsoil5
+  GROUND indices, TX -> RX: [10, 10, 10, 10, 10, 7, 7, 7, 7, 7]
+  time range: 2008-03-25T00:00:00+00:00 -> 2008-03-26T00:00:00+00:00
+Archivo de separación Whittaker cargado: /orcd/home/002/jpvelasq/basefolder_JP/real_whittaker_selected_background_16_22_for_inversion.h5
+Número de muestras cargadas: 361
+Rango temporal del archivo:
+  2008-03-25T16:00:00+00:00
+  2008-03-25T22:00:00+00:00
+Datasets usados:
+  timestamps_unix
+  A_background
+  phi_background
+  A_perturbation
+  phi_perturbation
+  A_total_fit
+  phi_total_fit
+Number of waveguide segments: 10
+17
+2008-03-25T18:00:00+00:00  →  índice 121
+2008-03-25T18:15:00+00:00  →  índice 136
+2008-03-25T18:30:00+00:00  →  índice 151
+2008-03-25T18:45:00+00:00  →  índice 166
+2008-03-25T19:00:00+00:00  →  índice 181
+2008-03-25T19:15:00+00:00  →  índice 196
+2008-03-25T19:30:00+00:00  →  índice 211
+2008-03-25T19:45:00+00:00  →  índice 226
+2008-03-25T20:00:00+00:00  →  índice 241
+2008-03-25T20:15:00+00:00  →  índice 256
+2008-03-25T20:30:00+00:00  →  índice 271
+2008-03-25T20:45:00+00:00  →  índice 286
+2008-03-25T21:00:00+00:00  →  índice 301
+2008-03-25T21:15:00+00:00  →  índice 316
+2008-03-25T21:30:00+00:00  →  índice 331
+2008-03-25T21:45:00+00:00  →  índice 346
+2008-03-25T22:00:00+00:00  →  índice 361
+Primer tiempo de inversión: 2008-03-25T18:00:00+00:00 -> índice 121 / archivo: 2008-03-25T18:00:00+00:00
+Último tiempo de inversión:  2008-03-25T22:00:00+00:00 -> índice 361 / archivo: 2008-03-25T22:00:00+00:00
+Geometry cache:
+  effective path points = 21
+  waveguide segments    = 10
+  segment starts [km]   = [0.0, 639.938, 1279.875, 1919.813, 2559.751, 3199.688, 3839.626, 4479.563, 5119.501, 5759.439]
+  midpoints [km]        = [319.969, 959.906, 1599.844, 2239.782, 2879.719, 3519.657, 4159.595, 4799.532, 5439.47, 6079.408]
+chi2(seed FIRI) = 4.602646883272219
+Norm. error_A: 0.2194189432512629, norm. error_ϕ: 90.22328971024776
+Starting optimization with optimizer BlackBoxOptim.DXNESOpt{Float64, RandomBound{ContinuousRectSearchSpace}}
+0.00 secs, 0 evals, 0 steps
+σ=1.0 η[x]=1.0 η[σ]=0.0 η[B]=0.0 |tr(ln_B)|=7.993605777301127e-15 |path|=NaN speed=NaN
+Norm. error_A: 5.9002394852001245, norm. error_ϕ: 140.8284007948868
+Norm. error_A: 1.9297058444107464, norm. error_ϕ: 6.243483823760777
+Norm. error_A: 9.04360489259005, norm. error_ϕ: 146.90156641610037
+Norm. error_A: 0.9296063895217713, norm. error_ϕ: 28.06655653356369
+Norm. error_A: 0.5645365365334867, norm. error_ϕ: 13.475221002652704
+Norm. error_A: 0.2523209344233199, norm. error_ϕ: 53.60211295350554
+Norm. error_A: 1.494913343462615, norm. error_ϕ: 60.55420906440234
+Norm. error_A: 0.32989656345895496, norm. error_ϕ: 77.13495710239731
+Norm. error_A: 0.31085262623724697, norm. error_ϕ: 19.60025729306386
+Norm. error_A: 0.30276292137726923, norm. error_ϕ: 1.4866683549158417
+1901.72 secs, 10 evals, 1 steps, fitness=1.789431276
+σ=0.9251506251472082 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=4.884981308350689e-15 |path|=NaN speed=NaN
+Norm. error_A: 3.9622009426015032, norm. error_ϕ: 83.00761017535115
+Norm. error_A: 6.494945222673411, norm. error_ϕ: 103.50005801624559
+Norm. error_A: 1.7140838901444047, norm. error_ϕ: 5.551093274444457
+Norm. error_A: 4.032536498914511, norm. error_ϕ: 90.26217601303546
+Norm. error_A: 0.19564410760880396, norm. error_ϕ: 77.63765081577564
+Norm. error_A: 1.2619066995555357, norm. error_ϕ: 21.52779419401178
+Norm. error_A: 0.20840595901951942, norm. error_ϕ: 59.98493314781301
+Norm. error_A: 0.14909381460665427, norm. error_ϕ: 52.728967632791885
+Norm. error_A: 0.1942745429566082, norm. error_ϕ: 59.24642792018126
+Norm. error_A: 0.3383003192239159, norm. error_ϕ: 46.645223967760174
+3741.62 secs, 20 evals, 2 steps, fitness=1.789431276
+σ=0.9408301437584986 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=5.773159728050814e-15 |path|=NaN speed=NaN
+Norm. error_A: 9.44899777661647, norm. error_ϕ: 178.26830711363417
+Norm. error_A: 7.493883071796101, norm. error_ϕ: 146.56197538518842
+Norm. error_A: 2.5585511730773622, norm. error_ϕ: 67.87956129804253
+Norm. error_A: 0.8285694680969767, norm. error_ϕ: 5.0527737089320555
+Norm. error_A: 0.3912469680756983, norm. error_ϕ: 32.219860078781664
+Norm. error_A: 0.20543256041523983, norm. error_ϕ: 59.76937580107203
+Norm. error_A: 0.33976223137379435, norm. error_ϕ: 31.9422832933199
+Norm. error_A: 0.27193747194554974, norm. error_ϕ: 3.773846331591995
+Norm. error_A: 0.49854782791205776, norm. error_ϕ: 39.366331823606686
+Norm. error_A: 0.49681107067934827, norm. error_ϕ: 42.53223409244342
+5778.15 secs, 30 evals, 3 steps, fitness=1.789431276
+σ=0.8666821679254499 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=4.440892098500626e-15 |path|=NaN speed=NaN
+Norm. error_A: 4.936662082907231, norm. error_ϕ: 108.38571296684555
+Norm. error_A: 4.313722093784029, norm. error_ϕ: 135.29632062795395
+Norm. error_A: 0.2392081065845808, norm. error_ϕ: 55.15031206562495
+Norm. error_A: 0.4449815975252742, norm. error_ϕ: 27.300022302113966
+Norm. error_A: 0.45928607403430627, norm. error_ϕ: 30.130741539334583
+Norm. error_A: 1.0245225478434166, norm. error_ϕ: 64.81777910287644
+Norm. error_A: 0.21934696622114636, norm. error_ϕ: 18.3135495548645
+Norm. error_A: 0.4450614598014101, norm. error_ϕ: 18.07720184506128
+Norm. error_A: 0.701147950073787, norm. error_ϕ: 3.337847571890171
+Norm. error_A: 0.2992407836060771, norm. error_ϕ: 3.263429049475661
+7884.91 secs, 40 evals, 4 steps, fitness=1.789431276
+σ=0.8418305863368992 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=4.884981308350689e-15 |path|=NaN speed=NaN
+Norm. error_A: 4.0793772044022, norm. error_ϕ: 58.09382148986865
+Norm. error_A: 0.8920039447408387, norm. error_ϕ: 18.18230597507392
+Norm. error_A: 0.9093851104862067, norm. error_ϕ: 37.12237726805779
+Norm. error_A: 0.171901665505625, norm. error_ϕ: 19.299132099131644
+Norm. error_A: 0.24991968045389049, norm. error_ϕ: 21.33446996251273
+Norm. error_A: 0.4910237513107664, norm. error_ϕ: 1.5500360526343622
+Norm. error_A: 0.4336471835454694, norm. error_ϕ: 17.88660126467016
+Norm. error_A: 0.29915546747376076, norm. error_ϕ: 2.8907571650265913
+Norm. error_A: 0.328125480540723, norm. error_ϕ: 4.5733146883017755
+Norm. error_A: 0.2338729844467625, norm. error_ϕ: 1.6998499505758606
+10005.68 secs, 50 evals, 5 steps, fitness=1.789431276
+σ=0.6902006990970974 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=4.440892098500626e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.20667833421619958, norm. error_ϕ: 52.81852286909868
+Norm. error_A: 1.313081913680857, norm. error_ϕ: 3.372096352032466
+Norm. error_A: 0.26764748726940285, norm. error_ϕ: 39.16181360248619
+Norm. error_A: 0.2529928223308349, norm. error_ϕ: 87.74204268972437
+Norm. error_A: 0.6710546398038858, norm. error_ϕ: 51.52002831577613
+Norm. error_A: 0.6804193580062531, norm. error_ϕ: 53.7640185741948
+Norm. error_A: 0.3906129012145685, norm. error_ϕ: 24.930200589135193
+Norm. error_A: 0.6429638533832738, norm. error_ϕ: 52.10471982299302
+Norm. error_A: 0.6354263330261519, norm. error_ϕ: 49.17660733570441
+Norm. error_A: 0.35807220579199245, norm. error_ϕ: 11.641527220379226
+12273.02 secs, 60 evals, 6 steps, fitness=1.789431276
+σ=0.7885051512426726 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=2.6645352591003757e-15 |path|=NaN speed=NaN
+Norm. error_A: 3.782101189882549, norm. error_ϕ: 77.1960433299411
+Norm. error_A: 4.377765783406949, norm. error_ϕ: 69.49988619118604
+Norm. error_A: 10.208649992001737, norm. error_ϕ: 230.14199331868565
+Norm. error_A: 3.1620140871948412, norm. error_ϕ: 61.65934301253692
+Norm. error_A: 6.047029546090377, norm. error_ϕ: 158.55018410788605
+Norm. error_A: 2.2010168892435416, norm. error_ϕ: 12.180642181325348
+Norm. error_A: 1.6190624170289016, norm. error_ϕ: 3.5255465084267437
+Norm. error_A: 1.058710766159501, norm. error_ϕ: 4.147322006997178
+Norm. error_A: 1.6806594868730043, norm. error_ϕ: 15.329278025749488
+Norm. error_A: 0.25147568419071337, norm. error_ϕ: 1.8671079690200107
+13846.63 secs, 70 evals, 7 steps, fitness=1.789431276
+σ=0.7838132466097274 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=7.549516567451064e-15 |path|=NaN speed=NaN
+Norm. error_A: 7.431917856155034, norm. error_ϕ: 96.3466743924801
+Norm. error_A: 0.4199261047022092, norm. error_ϕ: 28.823980494445323
+Norm. error_A: 2.8703636344687156, norm. error_ϕ: 31.583181081144986
+Norm. error_A: 11.532058126162525, norm. error_ϕ: 152.5493369150086
+Norm. error_A: 0.11751323116287501, norm. error_ϕ: 58.77171308793056
+Norm. error_A: 1.5099866212756172, norm. error_ϕ: 4.213228352736376
+Norm. error_A: 0.7497618336535616, norm. error_ϕ: 16.780542609000886
+Norm. error_A: 0.306051043503565, norm. error_ϕ: 3.6080358136713637
+Norm. error_A: 0.14419606250335218, norm. error_ϕ: 12.541376969181998
+Norm. error_A: 0.2356732831727362, norm. error_ϕ: 1.1084855217001208
+15618.77 secs, 80 evals, 8 steps, fitness=1.344158805
+σ=0.8175418412253449 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=6.661338147750939e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.2621320772160526, norm. error_ϕ: 46.3996107681393
+Norm. error_A: 0.13345541598618055, norm. error_ϕ: 87.28496100372942
+Norm. error_A: 0.41077319092431, norm. error_ϕ: 6.242500068474794
+Norm. error_A: 0.26326954550389664, norm. error_ϕ: 24.936566242250805
+Norm. error_A: 0.3809922674907393, norm. error_ϕ: 57.141097484296495
+Norm. error_A: 2.0300097926834826, norm. error_ϕ: 84.68324203629405
+Norm. error_A: 1.4463040218481462, norm. error_ϕ: 2.1399515874004367
+Norm. error_A: 0.5534971977204379, norm. error_ϕ: 53.38238878460511
+Norm. error_A: 0.23213420836492335, norm. error_ϕ: 78.7436463403965
+Norm. error_A: 0.5078752396763472, norm. error_ϕ: 63.184195264487556
+17725.17 secs, 90 evals, 9 steps, fitness=1.344158805
+σ=0.8526293117882102 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=6.217248937900877e-15 |path|=NaN speed=NaN
+Norm. error_A: 9.707350306050582, norm. error_ϕ: 133.21853160097606
+Norm. error_A: 8.53847628730404, norm. error_ϕ: 189.53611061684202
+Norm. error_A: 9.407317941314796, norm. error_ϕ: 142.41055926498373
+Norm. error_A: 5.298263427284525, norm. error_ϕ: 84.14052884163195
+Norm. error_A: 8.307893378138237, norm. error_ϕ: 118.8851470913627
+Norm. error_A: 0.3713851756054166, norm. error_ϕ: 30.01977410506602
+Norm. error_A: 6.614444183786264, norm. error_ϕ: 88.69054720172453
+Norm. error_A: 0.22343338448779, norm. error_ϕ: 3.6148425513351516
+Norm. error_A: 0.2544902682315867, norm. error_ϕ: 18.85907030946942
+Norm. error_A: 0.5223163005090484, norm. error_ϕ: 45.569340255944944
+19441.14 secs, 100 evals, 10 steps, fitness=1.344158805
+σ=0.7964356146462678 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=7.105427357601002e-15 |path|=NaN speed=NaN
+Norm. error_A: 2.4037552307634718, norm. error_ϕ: 21.31545686107471
+Norm. error_A: 2.70771736264406, norm. error_ϕ: 24.40089515411881
+Norm. error_A: 1.702109194867208, norm. error_ϕ: 13.832970169983323
+Norm. error_A: 0.391434869532948, norm. error_ϕ: 66.09439223488383
+Norm. error_A: 2.697108794031989, norm. error_ϕ: 16.770403601250038
+Norm. error_A: 0.5998532016055305, norm. error_ϕ: 67.78696249244301
+Norm. error_A: 0.4334108562002066, norm. error_ϕ: 55.98155897919715
+Norm. error_A: 0.5659214602429591, norm. error_ϕ: 46.094733587197595
+Norm. error_A: 0.1315535785966592, norm. error_ϕ: 80.89759859984407
+Norm. error_A: 0.6208002299021297, norm. error_ϕ: 7.119273895886479
+21467.09 secs, 110 evals, 11 steps, fitness=1.344158805
+σ=0.8240828920070363 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=7.549516567451064e-15 |path|=NaN speed=NaN
+Norm. error_A: 4.346846188616606, norm. error_ϕ: 57.6560098627801
+Norm. error_A: 6.378215685883861, norm. error_ϕ: 89.90236593824002
+Norm. error_A: 1.6559452778967703, norm. error_ϕ: 5.698600238193212
+Norm. error_A: 9.85103334722784, norm. error_ϕ: 134.24186427320848
+Norm. error_A: 1.0440034771523725, norm. error_ϕ: 4.663465786133827
+Norm. error_A: 2.5596837902293377, norm. error_ϕ: 41.56132156284709
+Norm. error_A: 0.2509528708385539, norm. error_ϕ: 25.06855987900674
+Norm. error_A: 6.135159185868682, norm. error_ϕ: 87.17950085471479
+Norm. error_A: 0.44698425497606387, norm. error_ϕ: 7.136826600289729
+Norm. error_A: 0.24848877289762483, norm. error_ϕ: 55.643080110233264
+23117.21 secs, 120 evals, 12 steps, fitness=1.344158805
+σ=0.7587935893979232 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=6.661338147750939e-15 |path|=NaN speed=NaN
+Norm. error_A: 9.296400706045961, norm. error_ϕ: 228.5027982876465
+Norm. error_A: 4.059069772142731, norm. error_ϕ: 130.03462667862144
+Norm. error_A: 0.27014886689612677, norm. error_ϕ: 22.308890476561945
+Norm. error_A: 0.12941798728971232, norm. error_ϕ: 46.07474822296355
+Norm. error_A: 0.29757172980036783, norm. error_ϕ: 1.8429684667165958
+Norm. error_A: 2.9901301712242483, norm. error_ϕ: 107.39938638133984
+Norm. error_A: 0.29277381477425507, norm. error_ϕ: 18.84025243257814
+Norm. error_A: 0.20340881114958045, norm. error_ϕ: 5.39096173878143
+Norm. error_A: 0.5730498437889975, norm. error_ϕ: 49.61474453823184
+Norm. error_A: 0.24903179003333106, norm. error_ϕ: 15.759622889527114
+25257.78 secs, 130 evals, 13 steps, fitness=1.344158805
+σ=0.7528008885530724 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=1.021405182655144e-14 |path|=NaN speed=NaN
+Norm. error_A: 2.9436854062233357, norm. error_ϕ: 37.52966539324771
+Norm. error_A: 5.037593603967258, norm. error_ϕ: 68.73581916730699
+Norm. error_A: 7.766921336553817, norm. error_ϕ: 116.94766417792162
+Norm. error_A: 2.941350348729943, norm. error_ϕ: 35.99500842235633
+Norm. error_A: 0.8400390590006602, norm. error_ϕ: 48.311913397882726
+Norm. error_A: 2.5502922224332063, norm. error_ϕ: 24.77528069360011
+Norm. error_A: 2.18875486422267, norm. error_ϕ: 90.17710794585028
+Norm. error_A: 0.5076257151736618, norm. error_ϕ: 65.82952313565622
+Norm. error_A: 0.2019506463245316, norm. error_ϕ: 20.22533828772913
+Norm. error_A: 0.16419892407491313, norm. error_ϕ: 10.073861287008544
+26995.41 secs, 140 evals, 14 steps, fitness=1.344158805
+σ=0.6971343165542978 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=7.105427357601002e-15 |path|=NaN speed=NaN
+Norm. error_A: 9.806321379808285, norm. error_ϕ: 154.3289822846608
+Norm. error_A: 3.9411005207264047, norm. error_ϕ: 59.431331457610746
+Norm. error_A: 2.2079751397513827, norm. error_ϕ: 16.2952370476872
+Norm. error_A: 2.063713155188941, norm. error_ϕ: 45.002010915977046
+Norm. error_A: 0.4607221300298108, norm. error_ϕ: 0.9043551502669811
+Norm. error_A: 1.023717697630123, norm. error_ϕ: 2.9559651828882925
+Norm. error_A: 1.8718923325070989, norm. error_ϕ: 7.202606330020952
+Norm. error_A: 0.1857346893910317, norm. error_ϕ: 7.6340292025237755
+Norm. error_A: 0.2504174522035526, norm. error_ϕ: 15.920554862219584
+Norm. error_A: 0.22843018954110403, norm. error_ϕ: 4.120704278132576
+28758.56 secs, 150 evals, 15 steps, fitness=1.344158805
+σ=0.6607084723554305 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=9.325873406851315e-15 |path|=NaN speed=NaN
+Norm. error_A: 5.741955306570959, norm. error_ϕ: 108.85125299886153
+Norm. error_A: 5.935133100570804, norm. error_ϕ: 82.67546469872016
+Norm. error_A: 1.3939340511021703, norm. error_ϕ: 48.89973053383319
+Norm. error_A: 0.1475123330886164, norm. error_ϕ: 74.34623312645633
+Norm. error_A: 4.743137514777297, norm. error_ϕ: 68.63800729785045
+Norm. error_A: 0.4027545905933586, norm. error_ϕ: 7.348619354224313
+Norm. error_A: 0.5076180858880412, norm. error_ϕ: 40.75281488665874
+Norm. error_A: 0.18250188077632587, norm. error_ϕ: 65.52230486749163
+Norm. error_A: 0.22514914647283107, norm. error_ϕ: 44.34750991178521
+Norm. error_A: 0.4214350605944323, norm. error_ϕ: 63.07828477938414
+30653.13 secs, 160 evals, 16 steps, fitness=1.344158805
+σ=0.6473285721634544 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=3.552713678800501e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.3214498782905865, norm. error_ϕ: 24.866677776701668
+Norm. error_A: 0.9522096183312833, norm. error_ϕ: 7.235743729613631
+Norm. error_A: 2.0045335762788543, norm. error_ϕ: 7.811214529500474
+Norm. error_A: 0.44137001770459805, norm. error_ϕ: 57.018747269615105
+Norm. error_A: 0.5739279382522022, norm. error_ϕ: 54.7472883002267
+Norm. error_A: 0.36983479255246815, norm. error_ϕ: 71.76720485584259
+Norm. error_A: 0.37848790894780787, norm. error_ϕ: 66.60244301142927
+Norm. error_A: 0.14510778549190045, norm. error_ϕ: 79.71413366091367
+Norm. error_A: 0.2501581301565581, norm. error_ϕ: 12.25027660963227
+Norm. error_A: 0.44142307997496205, norm. error_ϕ: 23.13705407076733
+32756.70 secs, 170 evals, 17 steps, fitness=1.344158805
+σ=0.6440720916043631 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=3.1086244689504383e-15 |path|=NaN speed=NaN
+Norm. error_A: 5.316095175479362, norm. error_ϕ: 76.76924113453177
+Norm. error_A: 6.3385285353407435, norm. error_ϕ: 89.91912218354193
+Norm. error_A: 1.8297203870062269, norm. error_ϕ: 9.33120125274578
+Norm. error_A: 0.46802337429793944, norm. error_ϕ: 11.178215389833083
+Norm. error_A: 0.7385701041532792, norm. error_ϕ: 9.010133505728703
+Norm. error_A: 0.2247715248223677, norm. error_ϕ: 30.757144023447626
+Norm. error_A: 0.17305268769708176, norm. error_ϕ: 84.5147807019134
+Norm. error_A: 0.11533260885469097, norm. error_ϕ: 40.00119686867851
+Norm. error_A: 0.331212143201479, norm. error_ϕ: 82.475200027957
+Norm. error_A: 0.5299827614327871, norm. error_ϕ: 38.701012899132586
+34634.14 secs, 180 evals, 18 steps, fitness=1.344158805
+σ=0.6987278377162427 η[x]=1.0 η[σ]=1.25 η[B]=0.017857142857142856 |tr(ln_B)|=6.661338147750939e-15 |path|=NaN speed=NaN
+Norm. error_A: 7.126343185691083, norm. error_ϕ: 98.06802082333294
+Norm. error_A: 7.445072743247957, norm. error_ϕ: 109.29876550436425
+Norm. error_A: 0.8910958510154293, norm. error_ϕ: 2.741896782119221
+Norm. error_A: 0.6070540820299957, norm. error_ϕ: 14.361491098639714
+Norm. error_A: 0.8990038597311402, norm. error_ϕ: 57.66399820932843
+Norm. error_A: 0.1583068416816938, norm. error_ϕ: 77.65681938184139
+Norm. error_A: 0.32455899525535525, norm. error_ϕ: 80.54833764631029
+Norm. error_A: 0.13650663577689282, norm. error_ϕ: 40.34227326325655
+Norm. error_A: 0.23149964740266327, norm. error_ϕ: 65.07781507608976
+Norm. error_A: 0.23809683322255865, norm. error_ϕ: 54.971282615254545
+
+Optimization stopped after 19 steps and 36499.60 seconds
+Termination reason: Max time (36000.0 s) reached
+Steps per second = 0.00
+Function evals per second = 0.01
+Improvements/step = NaN
+Total function evaluations = 190
+
+
+Best candidate found: [69.3597, 0.0254086, 0.60913, -0.108489, 1.76566, 0.185975, -0.682157, -0.078139, 0.296813, 0.409116, -0.00216989, 0.0345887, 0.00675936, -0.0400772, -0.00410252]
+
+Fitness: 1.344158805
+
+Mejor solución encontrada: [69.35969862901713, 0.025408571976892638, 0.6091296773498642, -0.1084894859498894, 1.7656603778118374, 0.18597483897631928, -0.6821569103402243, -0.07813897882511059, 0.29681300107401254, 0.4091162160847013, -0.0021698942512157022, 0.03458869110548963, 0.006759355762137095, -0.04007721121925526, -0.004102516218126154]
+Mejor error encontrado: 1.344158804872857
+Parámetros iniciales: [70.93157100832119, 0.02362601104815065, 0.6309437477618507, -0.1172361567740213, 1.781775057195727, 0.1798626527735148, -0.7183163078548129, -0.07238044623458698, 0.29364907405058155, 0.383338637221558, -0.0020295433454318493, 0.03247156108586324, 0.006262402864343245, -0.03719773552870514, -0.0038082733033810846]
+Parámetros óptimos: [[69.35969862901713, 0.025408571976892638, 0.6091296773498642, -0.1084894859498894, 1.7656603778118374, 0.18597483897631928, -0.6821569103402243, -0.07813897882511059, 0.29681300107401254], [0.4091162160847013, -0.0021698942512157022, 0.03458869110548963, 0.006759355762137095, -0.04007721121925526, -0.004102516218126154]]
+chi2(init) = 4.602646883272219
+chi2(best) = 1.3442170282983954
+best_fitness(BBO) = 1.344158804872857
+Inversion results saved to: /orcd/home/002/jpvelasq/basefolder_JP/outputs_real_background_inversion_whittaker_ocean5_goodsoil5_BBO1/new-real-background-inversion_whittaker_ocean5_goodsoil5_BBO1_results_16592871.h5

@@ -1,0 +1,178 @@
+[OK] Preflight: Threads=1  BLAS=1  GROUND=10
+[RUN] SLURM_JOB_ID=16574705
+[RUN] SLURM_CPUS_PER_TASK=64
+[RUN] JULIA_NUM_THREADS=1
+[RUN] Script=run_reference_efield_firi_10wg_13ground_cases.jl
+[RUN] Existing compatible checkpoint will be resumed automatically.
+Geodesic Distance from WWVB to PLO: 6568.28 km
+Geodesic Distance from WWVB to PIU: 5659.0 km
+Geodesic Distance from NAA to PLO: 6568.28 km
+Geodesic Distance from NAA to PIU: 5659.0 km
+Initial time: 2008-01-10T10:00:00+00:00
+Scenario defined.
+Datetime range: from 2008-01-10 10:00:00 UTC to 2008-01-11 10:00:00 UTC with a length of 289.
+========================================================================================
+FIRI–LMP NAA–PLO reference-series generation
+  root directory : /orcd/home/002/jpvelasq/basefolder_JP
+  output         : /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325
+  SLURM job ID   : 16574705
+  fresh run      : false
+========================================================================================
+
+GROUND catalog:
+10×4 DataFrame
+ Row │ ground_index  epsilon_r  sigma_S_m  material
+     │ Int64         Float64    Float64    String
+─────┼─────────────────────────────────────────────────────────────────
+   1 │            1        5.0     1.0e-5  Ice / permafrost
+   2 │            2        5.0     3.0e-5  Intermediate LMP/LWPC class
+   3 │            3       10.0     0.0001  Poor soil / fresh water
+   4 │            4       10.0     0.0003  Intermediate LMP/LWPC class
+   5 │            5       15.0     0.001   Average soil
+   6 │            6       15.0     0.003   Intermediate LMP/LWPC class
+   7 │            7       15.0     0.01    Clay / good soil
+   8 │            8       15.0     0.03    Intermediate LMP/LWPC class
+   9 │            9       15.0     0.1     Marine sands
+  10 │           10       81.0     4.0     Sea water
+
+
+Temporal and spatial configuration:
+  first/last UTC           = 2008-03-25T00:00:00+00:00 — 2008-03-26T00:00:00+00:00
+  cadence                  = 5 min
+  evaluated times          = 289
+  geolinspace npoints arg  = 19
+  effective path points    = 21
+  waveguide segments       = 10
+  path length [km]         = 6399.376
+  segment lengths [km]     = [639.938, 639.938, 639.938, 639.938, 639.938, 639.938, 639.938, 639.938, 639.938, 639.938]
+
+Computing IGRF at the ten segment midpoints...
+Computing FIRI profiles for 289 times and 10 segments...
+FIRI precomputation finished in 2.97 s.
+FIRI array size: 3.33 MiB.
+
+Ground configurations (TX -> RX):
+13×5 DataFrame
+ Row │ case_index  case_key          case_label                         case_type      ground_indices_TX_to_RX
+     │ Int64       String            String                             String         String
+─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │          1  ground_1          GROUND[1]: Ice / permafrost        homogeneous    1,1,1,1,1,1,1,1,1,1
+   2 │          2  ground_2          GROUND[2]: Intermediate LMP/LWPC…  homogeneous    2,2,2,2,2,2,2,2,2,2
+   3 │          3  ground_3          GROUND[3]: Poor soil / fresh wat…  homogeneous    3,3,3,3,3,3,3,3,3,3
+   4 │          4  ground_4          GROUND[4]: Intermediate LMP/LWPC…  homogeneous    4,4,4,4,4,4,4,4,4,4
+   5 │          5  ground_5          GROUND[5]: Average soil            homogeneous    5,5,5,5,5,5,5,5,5,5
+   6 │          6  ground_6          GROUND[6]: Intermediate LMP/LWPC…  homogeneous    6,6,6,6,6,6,6,6,6,6
+   7 │          7  ground_7          GROUND[7]: Clay / good soil        homogeneous    7,7,7,7,7,7,7,7,7,7
+   8 │          8  ground_8          GROUND[8]: Intermediate LMP/LWPC…  homogeneous    8,8,8,8,8,8,8,8,8,8
+   9 │          9  ground_9          GROUND[9]: Marine sands            homogeneous    9,9,9,9,9,9,9,9,9,9
+  10 │         10  ground_10         GROUND[10]: Sea water              homogeneous    10,10,10,10,10,10,10,10,10,10
+  11 │         11  ocean5_goodsoil5  G10 × 5 followed by G7 × 5 (TX t…  heterogeneous  10,10,10,10,10,7,7,7,7,7
+  12 │         12  ocean6_goodsoil4  G10 × 6 followed by G7 × 4 (TX t…  heterogeneous  10,10,10,10,10,10,7,7,7,7
+  13 │         13  ocean7_goodsoil3  G10 × 7 followed by G7 × 3 (TX t…  heterogeneous  10,10,10,10,10,10,10,7,7,7
+
+Total independent propagations: 3757
+Starting 63 one-thread workers from 64 allocated CPUs...
+Installing the common context on all workers...
+
+Pending propagation jobs: 3757 / 3757
+Running an internal first-wave validation with 63 real propagation jobs...
+[first-wave validation] Progress:   63/  63 received | success=  63 failure=  0 | elapsed=1.7 min | ETA≈0.0 min
+First-wave validation passed. Remaining jobs: 3694
+[full evaluation] Progress:   64/3694 received | success=  64 failure=  0 | elapsed=1.8 min | ETA≈103.1 min
+[full evaluation] Progress:  128/3694 received | success= 128 failure=  0 | elapsed=2.8 min | ETA≈76.8 min
+[full evaluation] Progress:  192/3694 received | success= 192 failure=  0 | elapsed=4.1 min | ETA≈74.2 min
+[full evaluation] Progress:  256/3694 received | success= 256 failure=  0 | elapsed=5.4 min | ETA≈72.1 min
+[full evaluation] Progress:  320/3694 received | success= 320 failure=  0 | elapsed=6.6 min | ETA≈69.8 min
+[full evaluation] Progress:  384/3694 received | success= 384 failure=  0 | elapsed=7.9 min | ETA≈68.1 min
+[full evaluation] Progress:  448/3694 received | success= 448 failure=  0 | elapsed=9.1 min | ETA≈66.3 min
+[full evaluation] Progress:  512/3694 received | success= 512 failure=  0 | elapsed=10.4 min | ETA≈64.4 min
+[full evaluation] Progress:  576/3694 received | success= 576 failure=  0 | elapsed=11.5 min | ETA≈62.0 min
+[full evaluation] Progress:  640/3694 received | success= 640 failure=  0 | elapsed=12.6 min | ETA≈60.0 min
+[full evaluation] Progress:  704/3694 received | success= 704 failure=  0 | elapsed=13.6 min | ETA≈57.9 min
+[full evaluation] Progress:  768/3694 received | success= 768 failure=  0 | elapsed=14.7 min | ETA≈56.1 min
+[full evaluation] Progress:  832/3694 received | success= 832 failure=  0 | elapsed=15.8 min | ETA≈54.5 min
+[full evaluation] Progress:  896/3694 received | success= 896 failure=  0 | elapsed=17.1 min | ETA≈53.4 min
+[full evaluation] Progress:  960/3694 received | success= 960 failure=  0 | elapsed=18.3 min | ETA≈52.3 min
+[full evaluation] Progress: 1024/3694 received | success=1024 failure=  0 | elapsed=19.6 min | ETA≈51.0 min
+[full evaluation] Progress: 1088/3694 received | success=1088 failure=  0 | elapsed=20.8 min | ETA≈49.9 min
+[full evaluation] Progress: 1152/3694 received | success=1152 failure=  0 | elapsed=22.0 min | ETA≈48.6 min
+[full evaluation] Progress: 1216/3694 received | success=1216 failure=  0 | elapsed=23.2 min | ETA≈47.2 min
+[full evaluation] Progress: 1280/3694 received | success=1280 failure=  0 | elapsed=24.4 min | ETA≈46.0 min
+[full evaluation] Progress: 1344/3694 received | success=1344 failure=  0 | elapsed=25.5 min | ETA≈44.6 min
+[full evaluation] Progress: 1408/3694 received | success=1408 failure=  0 | elapsed=26.8 min | ETA≈43.5 min
+[full evaluation] Progress: 1472/3694 received | success=1472 failure=  0 | elapsed=28.0 min | ETA≈42.3 min
+[full evaluation] Progress: 1536/3694 received | success=1536 failure=  0 | elapsed=29.1 min | ETA≈40.9 min
+[full evaluation] Progress: 1600/3694 received | success=1600 failure=  0 | elapsed=30.4 min | ETA≈39.8 min
+[full evaluation] Progress: 1664/3694 received | success=1664 failure=  0 | elapsed=31.6 min | ETA≈38.5 min
+[full evaluation] Progress: 1728/3694 received | success=1728 failure=  0 | elapsed=32.8 min | ETA≈37.3 min
+[full evaluation] Progress: 1792/3694 received | success=1792 failure=  0 | elapsed=34.1 min | ETA≈36.2 min
+[full evaluation] Progress: 1856/3694 received | success=1856 failure=  0 | elapsed=35.4 min | ETA≈35.1 min
+[full evaluation] Progress: 1920/3694 received | success=1920 failure=  0 | elapsed=36.7 min | ETA≈33.9 min
+[full evaluation] Progress: 1984/3694 received | success=1984 failure=  0 | elapsed=38.2 min | ETA≈32.9 min
+[full evaluation] Progress: 2048/3694 received | success=2048 failure=  0 | elapsed=39.5 min | ETA≈31.8 min
+[full evaluation] Progress: 2112/3694 received | success=2112 failure=  0 | elapsed=40.8 min | ETA≈30.6 min
+[full evaluation] Progress: 2176/3694 received | success=2176 failure=  0 | elapsed=42.2 min | ETA≈29.4 min
+[full evaluation] Progress: 2240/3694 received | success=2240 failure=  0 | elapsed=43.7 min | ETA≈28.4 min
+[full evaluation] Progress: 2304/3694 received | success=2304 failure=  0 | elapsed=45.2 min | ETA≈27.2 min
+[full evaluation] Progress: 2368/3694 received | success=2368 failure=  0 | elapsed=46.7 min | ETA≈26.1 min
+[full evaluation] Progress: 2432/3694 received | success=2432 failure=  0 | elapsed=48.2 min | ETA≈25.0 min
+[full evaluation] Progress: 2496/3694 received | success=2496 failure=  0 | elapsed=49.6 min | ETA≈23.8 min
+[full evaluation] Progress: 2560/3694 received | success=2560 failure=  0 | elapsed=51.1 min | ETA≈22.6 min
+[full evaluation] Progress: 2624/3694 received | success=2624 failure=  0 | elapsed=52.6 min | ETA≈21.4 min
+[full evaluation] Progress: 2688/3694 received | success=2688 failure=  0 | elapsed=53.9 min | ETA≈20.2 min
+[full evaluation] Progress: 2752/3694 received | success=2752 failure=  0 | elapsed=55.3 min | ETA≈18.9 min
+[full evaluation] Progress: 2816/3694 received | success=2816 failure=  0 | elapsed=56.8 min | ETA≈17.7 min
+[full evaluation] Progress: 2880/3694 received | success=2880 failure=  0 | elapsed=58.3 min | ETA≈16.5 min
+[full evaluation] Progress: 2944/3694 received | success=2944 failure=  0 | elapsed=59.7 min | ETA≈15.2 min
+[full evaluation] Progress: 3008/3694 received | success=3008 failure=  0 | elapsed=61.2 min | ETA≈14.0 min
+[full evaluation] Progress: 3072/3694 received | success=3072 failure=  0 | elapsed=62.6 min | ETA≈12.7 min
+[full evaluation] Progress: 3136/3694 received | success=3136 failure=  0 | elapsed=64.0 min | ETA≈11.4 min
+[full evaluation] Progress: 3200/3694 received | success=3200 failure=  0 | elapsed=65.4 min | ETA≈10.1 min
+[full evaluation] Progress: 3264/3694 received | success=3264 failure=  0 | elapsed=66.9 min | ETA≈8.8 min
+[full evaluation] Progress: 3328/3694 received | success=3328 failure=  0 | elapsed=68.1 min | ETA≈7.5 min
+[full evaluation] Progress: 3392/3694 received | success=3392 failure=  0 | elapsed=69.3 min | ETA≈6.2 min
+[full evaluation] Progress: 3456/3694 received | success=3456 failure=  0 | elapsed=70.6 min | ETA≈4.9 min
+[full evaluation] Progress: 3520/3694 received | success=3520 failure=  0 | elapsed=71.7 min | ETA≈3.5 min
+[full evaluation] Progress: 3584/3694 received | success=3584 failure=  0 | elapsed=72.8 min | ETA≈2.2 min
+[full evaluation] Progress: 3648/3694 received | success=3648 failure=  0 | elapsed=74.1 min | ETA≈0.9 min
+[full evaluation] Progress: 3694/3694 received | success=3694 failure=  0 | elapsed=74.9 min | ETA≈0.0 min
+
+DSP.unwrap was applied independently to all 13 complete time series.
+No phase alignment between ground cases was applied.
+
+Summary:
+13×17 DataFrame
+ Row │ case_index  case_key          case_label                         case_type      ground_indices_TX_to_RX        mean_amplitude_dB  min_amplitude_dB  max_amplitude_dB  mean_unwrapped_phase_deg  min_unwrapped_phase_deg  max_unwrapped_phase_deg  mean_delta_A_vs_ocean_dB  rmse_delta_A_vs_ocean_dB  mean_delta_phi_vs_ocean_deg  rmse_delta_phi_vs_ocean_deg  total_worker_runtime_s  output_file
+     │ Int64       String            String                             String         String                         Float64            Float64           Float64           Float64                   Float64                  Float64                  Float64                   Float64                   Float64                      Float64                      Float64                 String
+─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │          1  ground_1          GROUND[1]: Ice / permafrost        homogeneous    1,1,1,1,1,1,1,1,1,1                      13.6772           1.14455           19.3739                  109.004                  -187.302                  429.648                -40.4024                    40.962                      -23.4152                      73.5658                  20158.3  /orcd/home/002/jpvelasq/basefold…
+   2 │          2  ground_2          GROUND[2]: Intermediate LMP/LWPC…  homogeneous    2,2,2,2,2,2,2,2,2,2                      16.7136           5.12568           26.3693                   91.861                  -196.972                  414.063                -37.366                     38.7494                     -40.5579                      78.2277                  20831.6  /orcd/home/002/jpvelasq/basefold…
+   3 │          3  ground_3          GROUND[3]: Poor soil / fresh wat…  homogeneous    3,3,3,3,3,3,3,3,3,3                      22.4696          -7.94476           34.3331                   53.9422                 -185.069                  310.78                 -31.61                      34.0515                     -78.4768                      82.038                   21956.9  /orcd/home/002/jpvelasq/basefold…
+   4 │          4  ground_4          GROUND[4]: Intermediate LMP/LWPC…  homogeneous    4,4,4,4,4,4,4,4,4,4                      34.7991          25.8774            42.4919                   19.6097                 -160.751                  198.719                -19.2805                    21.2861                    -112.809                      121.449                   22377.3  /orcd/home/002/jpvelasq/basefold…
+   5 │          5  ground_5          GROUND[5]: Average soil            homogeneous    5,5,5,5,5,5,5,5,5,5                      45.4095          33.4166            47.9296                   80.8166                 -116.727                  517.266                 -8.67013                    8.91996                    -51.6024                      97.7571                  22334.7  /orcd/home/002/jpvelasq/basefold…
+   6 │          6  ground_6          GROUND[6]: Intermediate LMP/LWPC…  homogeneous    6,6,6,6,6,6,6,6,6,6                      48.2042          42.5491            54.2715                   93.2856                 -109.151                  289.745                 -5.87546                    6.26955                    -39.1333                      46.9367                  22438.7  /orcd/home/002/jpvelasq/basefold…
+   7 │          7  ground_7          GROUND[7]: Clay / good soil        homogeneous    7,7,7,7,7,7,7,7,7,7                      50.6366          45.3992            57.0767                  106.09                   -118.272                  319.918                 -3.44302                    3.92045                    -26.329                       27.6697                  22105.1  /orcd/home/002/jpvelasq/basefold…
+   8 │          8  ground_8          GROUND[8]: Intermediate LMP/LWPC…  homogeneous    8,8,8,8,8,8,8,8,8,8                      52.2319          46.8825            58.2274                  116.105                  -114.766                  335.824                 -1.8477                     2.13755                    -16.3135                      16.6067                  22659.9  /orcd/home/002/jpvelasq/basefold…
+   9 │          9  ground_9          GROUND[9]: Marine sands            homogeneous    9,9,9,9,9,9,9,9,9,9                      53.1827          46.7915            58.8326                  123.69                   -109.6                    345.895                 -0.896969                   1.04426                     -8.72859                      8.80624                 22562.7  /orcd/home/002/jpvelasq/basefold…
+  10 │         10  ground_10         GROUND[10]: Sea water              homogeneous    10,10,10,10,10,10,10,10,10,10            54.0796          46.6233            59.3909                  132.419                  -101.942                  356.338                  0.0                        0.0                          0.0                          0.0                     22881.1  /orcd/home/002/jpvelasq/basefold…
+  11 │         11  ocean5_goodsoil5  G10 × 5 followed by G7 × 5 (TX t…  heterogeneous  10,10,10,10,10,7,7,7,7,7                 51.9053          47.0789            58.2439                  117.736                  -113.144                  338.018                 -2.17431                    2.60745                    -14.6829                      14.9628                  22196.5  /orcd/home/002/jpvelasq/basefold…
+  12 │         12  ocean6_goodsoil4  G10 × 6 followed by G7 × 4 (TX t…  heterogeneous  10,10,10,10,10,10,7,7,7,7                52.4981          47.1006            58.6262                  119.381                  -113.174                  341.101                 -1.58157                    1.93278                    -13.0375                      13.152                   21809.7  /orcd/home/002/jpvelasq/basefold…
+  13 │         13  ocean7_goodsoil3  G10 × 7 followed by G7 × 3 (TX t…  heterogeneous  10,10,10,10,10,10,10,7,7,7               53.0168          47.034             58.7489                  122.873                  -108.28                   342.921                 -1.06284                    1.2436                      -9.54608                      9.98916                 21988.2  /orcd/home/002/jpvelasq/basefold…
+
+Individual reference files: 13
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_1_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_2_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_3_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_4_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_5_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_6_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_7_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_8_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_9_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_10_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean5_goodsoil5_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean6_goodsoil4_10wg_20080325.jld2
+  /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean7_goodsoil3_10wg_20080325.jld2
+Consolidated output: /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference_efield_firi_NAA_PLO_10wg_13ground_cases_20080325.jld2
+Checkpoint:          /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/checkpoint_reference_efield_firi_10wg_13ground_cases_20080325.jld2
+Completed successfully at 2026-06-26T00:09:15.491+00:00

@@ -1,0 +1,184 @@
+[OK] Preflight: Threads=64  BLAS=1
+[OK] BACKGROUND_H5=new-real-background-inversion-bbo_from_old_asls_restart_results_13341497.h5
+[OK] SEED_PERTURBATION_H5=new-perturbation-inversion_F3_nexp_oldASLS_BG13341497_FIXED_TPK_rel10_results_15341092.h5
+[RUN] SLURM_CPUS_PER_TASK=64  JULIA_NUM_THREADS=64
+[RUN] Fixed t_pk from data; BBO optimizes 6 parameters only; relative bounds ±10% around seed from first fixed-t_pk batch.
+Geodesic Distance from WWVB to PLO: 6568.28 km
+Geodesic Distance from WWVB to PIU: 5659.0 km
+Geodesic Distance from NAA to PLO: 6568.28 km
+Geodesic Distance from NAA to PIU: 5659.0 km
+Initial time: 2008-01-10T10:00:00+00:00
+Scenario defined.
+Datetime range: from 2008-01-10 10:00:00 UTC to 2008-01-11 10:00:00 UTC with a length of 289.
+Number of waveguide segments: 10
+17
+2008-03-25T18:00:00+00:00  →  índice 1
+2008-03-25T18:15:00+00:00  →  índice 901
+2008-03-25T18:30:00+00:00  →  índice 1801
+2008-03-25T18:45:00+00:00  →  índice 2701
+2008-03-25T19:00:00+00:00  →  índice 3601
+2008-03-25T19:15:00+00:00  →  índice 4501
+2008-03-25T19:30:00+00:00  →  índice 5401
+2008-03-25T19:45:00+00:00  →  índice 6301
+2008-03-25T20:00:00+00:00  →  índice 7201
+2008-03-25T20:15:00+00:00  →  índice 8101
+2008-03-25T20:30:00+00:00  →  índice 9001
+2008-03-25T20:45:00+00:00  →  índice 9901
+2008-03-25T21:00:00+00:00  →  índice 10801
+2008-03-25T21:15:00+00:00  →  índice 11701
+2008-03-25T21:30:00+00:00  →  índice 12601
+2008-03-25T21:45:00+00:00  →  índice 13501
+2008-03-25T22:00:00+00:00  →  índice 14401
+Verificación OK: reconstruction/*_coeffs coincide con optimization/best_candidate.
+Background h/beta cargado desde: new-real-background-inversion-bbo_from_old_asls_restart_results_13341497.h5
+coeffs_h_alb = [71.20241357159209, 0.021055197162810572, 0.6743012994492561, -0.11333325887009565, 1.7214683989334296, 0.1731868108849921, -0.716065900242031, -0.07029719522256873, 0.3271500853631088]
+coeffs_β_alb = [0.3843328445937041, -0.0021913820132952446, 0.033890681463773185, 0.005838896816599224, -0.04258953800948821, -0.003800062839568533]
+
+================================================================================
+t_pk fijo estimado desde datos detrended
+================================================================================
+  k_pk                  = 5
+  instante pico usado   = 2008-03-25T19:00:00+00:00
+  t₀                    = 2008-03-25T18:30:00+00:00
+  t_pk_fixed            = 1800.0 s respecto a t₀
+  score_pk[k_pk]        = 5.17462030
+  ΔA_pk[k_pk]           = 3.84917781 dB
+  Δϕ_pk[k_pk]           = 94.61781953 deg
+  σA_pk                 = 1.00190809 dB
+  σϕ_pk                 = 27.29459263 deg
+================================================================================
+
+Escalas de normalización: scale_A=9.59901851e+01, scale_phi=2.09006920e+04
+Seed libre cargado desde: new-perturbation-inversion_F3_nexp_oldASLS_BG13341497_FIXED_TPK_rel10_results_15341092.h5
+Llave de seed libre usada: reconstruction/free_params
+initial_free_params = [20.458218058965407, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+Fuente del seed de perturbación: new-perturbation-inversion_F3_nexp_oldASLS_BG13341497_FIXED_TPK_rel10_results_15341092.h5
+Llave del seed de perturbación: reconstruction/free_params
+Parámetros iniciales libres [amp, tau_u, tau_d, eps, z0, hz]: [20.458218058965407, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+Parámetros iniciales completos [amp, t_pk_fixed, tau_u, tau_d, eps, z0, hz]: [20.458218058965407, 1800.0, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+SearchRange 6D:
+  amp: (18.412396253068867, 22.50403986486195)
+  tau_u_s: (173.77863966096092, 212.39611514117448)
+  tau_d_s: (1136.514884354768, 1389.0737475447163)
+  eps_s: (700.2539237541317, 855.8659068106056)
+  z0_km: (69.8107788275343, 85.32428523365304)
+  hz_km: (9.489803417474734, 11.59864862135801)
+
+================================================================================
+Iniciando BBO 6D con t_pk fijo
+================================================================================
+  MaxTime       = 37800.0 s
+  NumDimensions = 6
+  NThreads      = 63
+  t_pk_fixed    = 1800.0 s
+================================================================================
+
+Norm. error_A: 0.10592008835539055, norm. error_ϕ: 0.43427019566154157, total: 0.5401902840169321
+Starting optimization with optimizer BlackBoxOptim.DXNESOpt{Float64, RandomBound{ContinuousRectSearchSpace}}
+0.00 secs, 0 evals, 0 steps
+σ=1.0 η[x]=1.0 η[σ]=0.0 η[B]=0.0 |tr(ln_B)|=8.881784197001252e-16 |path|=NaN speed=NaN
+Norm. error_A: 0.06662141161514015, norm. error_ϕ: 0.2828235029396343, total: 0.34944491455477444
+Norm. error_A: 0.06928964483356431, norm. error_ϕ: 0.28880557517256966, total: 0.358095220006134
+Norm. error_A: 0.06681120193428537, norm. error_ϕ: 0.2607469270814072, total: 0.32755812901569253
+Norm. error_A: 0.06647238953671189, norm. error_ϕ: 0.26781035631738687, total: 0.3342827458540988
+Norm. error_A: 0.06694120221194551, norm. error_ϕ: 0.2620970412243822, total: 0.3290382434363277
+Norm. error_A: 0.06823888211771671, norm. error_ϕ: 0.2860174394702281, total: 0.35425632158794484
+Norm. error_A: 2165.727730311268, norm. error_ϕ: 2.2841973684412196, total: 2168.011927679709
+Norm. error_A: 0.06733548111845747, norm. error_ϕ: 0.27750476546262537, total: 0.3448402465810828
+5689.39 secs, 8 evals, 1 steps, fitness=0.327558129
+σ=0.9846348377996377 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.3322676295501878e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.06694816905721164, norm. error_ϕ: 0.26081192846317974, total: 0.32776009752039137
+Norm. error_A: 0.06749680592660502, norm. error_ϕ: 0.25554251273272205, total: 0.32303931865932706
+Norm. error_A: 3292.682563562264, norm. error_ϕ: 0.47967011981039864, total: 3293.162233682074
+Norm. error_A: 2209.9867211991527, norm. error_ϕ: 1.5454793365808355, total: 2211.5322005357334
+Norm. error_A: 0.06731101821341154, norm. error_ϕ: 0.2730005116928105, total: 0.34031152990622204
+Norm. error_A: 0.0667712408165129, norm. error_ϕ: 0.26580265179193213, total: 0.33257389260844505
+Norm. error_A: 0.06797807374438176, norm. error_ϕ: 0.2786981475173815, total: 0.34667622126176323
+Norm. error_A: 0.06657305467982898, norm. error_ϕ: 0.2724907257095745, total: 0.3390637803894035
+11394.36 secs, 16 evals, 2 steps, fitness=0.323039319
+σ=0.9800172641242942 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.3322676295501878e-15 |path|=NaN speed=NaN
+Norm. error_A: 2877.1080111229203, norm. error_ϕ: 0.9213278853955772, total: 2878.0293390083157
+Norm. error_A: 0.06667519193180352, norm. error_ϕ: 0.2641183677171193, total: 0.33079355964892276
+Norm. error_A: 0.06819427942231905, norm. error_ϕ: 0.25521757412375, total: 0.32341185354606905
+Norm. error_A: 5563.387551240269, norm. error_ϕ: 0.3777736448373649, total: 5563.765324885107
+Norm. error_A: 0.06682050984399661, norm. error_ϕ: 0.26482706566127173, total: 0.33164757550526835
+Norm. error_A: 0.06669415591675393, norm. error_ϕ: 0.26405171829887525, total: 0.3307458742156292
+Norm. error_A: 0.06709052283669818, norm. error_ϕ: 0.25468745085027367, total: 0.32177797368697186
+17085.78 secs, 24 evals, 3 steps, fitness=0.321777974
+σ=0.9960760244865922 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.06783851888188604, norm. error_ϕ: 0.2506648866737751, total: 0.31850340555566115
+Norm. error_A: 2373.079891535954, norm. error_ϕ: 0.40581936707185995, total: 2373.485710903026
+Norm. error_A: 0.06687584130154596, norm. error_ϕ: 0.26409201670683446, total: 0.3309678580083804
+Norm. error_A: 0.06724060540245315, norm. error_ϕ: 0.25248317482213023, total: 0.31972378022458336
+Norm. error_A: 0.06801299360014194, norm. error_ϕ: 0.26822981229834786, total: 0.3362428058984898
+Norm. error_A: 0.06722125534445506, norm. error_ϕ: 0.25805742212131333, total: 0.3252786774657684
+Norm. error_A: 0.06789778807955969, norm. error_ϕ: 0.2624576959213948, total: 0.3303554840009545
+Norm. error_A: 0.06710316675674398, norm. error_ϕ: 0.2562711066025844, total: 0.3233742733593284
+22857.01 secs, 32 evals, 4 steps, fitness=0.318503406
+σ=0.819706920805981 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.0670918519915122, norm. error_ϕ: 0.26303045534213504, total: 0.3301223073336472
+Norm. error_A: 13.241077155120168, norm. error_ϕ: 0.8083874004769643, total: 14.049464555597133
+Norm. error_A: 0.06756654342418207, norm. error_ϕ: 0.254296764007122, total: 0.32186330743130404
+Norm. error_A: 8531.766148412522, norm. error_ϕ: 1.469331438253635, total: 8533.235479850775
+Norm. error_A: 0.0678593209409578, norm. error_ϕ: 0.25528069652067276, total: 0.32314001746163057
+Norm. error_A: 0.06796440078950965, norm. error_ϕ: 0.251481191885772, total: 0.31944559267528166
+Norm. error_A: 0.06726246489297347, norm. error_ϕ: 0.2532471976493602, total: 0.3205096625423337
+Norm. error_A: 245.65830645471254, norm. error_ϕ: 3.389792949434779, total: 249.04809940414734
+28751.58 secs, 40 evals, 5 steps, fitness=0.318503406
+σ=0.6768591767954711 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=2.220446049250313e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.06761737767495683, norm. error_ϕ: 0.25729051165838307, total: 0.3249078893333399
+Norm. error_A: 0.06843582072535996, norm. error_ϕ: 0.24790193371233432, total: 0.3163377544376943
+Norm. error_A: 0.06780728107201298, norm. error_ϕ: 0.25342293986472336, total: 0.32123022093673637
+Norm. error_A: 0.06713062777934319, norm. error_ϕ: 0.25209878349531306, total: 0.31922941127465626
+Norm. error_A: 0.0672405178769483, norm. error_ϕ: 0.25230355245817726, total: 0.31954407033512555
+Norm. error_A: 0.06792567574517284, norm. error_ϕ: 0.2531616947986896, total: 0.32108737054386244
+Norm. error_A: 0.06773825771009809, norm. error_ϕ: 0.2585783734899779, total: 0.32631663120007603
+Norm. error_A: 0.06797656711162346, norm. error_ϕ: 0.24858142059460991, total: 0.3165579877062334
+34515.83 secs, 48 evals, 6 steps, fitness=0.316337754
+σ=0.6636408798645123 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 7879.67185470054, norm. error_ϕ: 0.43509338914797097, total: 7880.106948089689
+Norm. error_A: 0.06851178790654781, norm. error_ϕ: 0.24440187368924884, total: 0.31291366159579664
+Norm. error_A: 0.06808427105682242, norm. error_ϕ: 0.24893908857435962, total: 0.31702335963118206
+Norm. error_A: 0.06859563912705913, norm. error_ϕ: 0.24341813176952912, total: 0.3120137708965882
+Norm. error_A: 0.06711882060075042, norm. error_ϕ: 0.25562304110939693, total: 0.32274186171014735
+Norm. error_A: 0.06751275393987544, norm. error_ϕ: 0.25409780705016444, total: 0.3216105609900399
+Norm. error_A: 0.06758003145849782, norm. error_ϕ: 0.2497896626950498, total: 0.3173696941535476
+Norm. error_A: 0.06787663062615422, norm. error_ϕ: 0.24917808650360587, total: 0.3170547171297601
+
+Optimization stopped after 7 steps and 40388.24 seconds
+Termination reason: Max time (37800.0 s) reached
+Steps per second = 0.00
+Function evals per second = 0.00
+Improvements/step = NaN
+Total function evaluations = 56
+
+
+Best candidate found: [20.5159, 194.417, 1293.86, 761.786, 76.1105, 10.7799]
+
+Fitness: 0.312013771
+
+Mejor solución libre encontrada [amp, tau_u, tau_d, eps, z0, hz]: [20.51589272494843, 194.41667913701474, 1293.8621458306043, 761.7859323666472, 76.11048983660899, 10.779863522419255]
+Mejor solución completa [amp, t_pk_fixed, tau_u, tau_d, eps, z0, hz]: [20.51589272494843, 1800.0, 194.41667913701474, 1293.8621458306043, 761.7859323666472, 76.11048983660899, 10.779863522419255]
+Mejor error encontrado: 0.3120137708965882
+Parámetros iniciales libres: [20.458218058965407, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+Parámetros iniciales completos: [20.458218058965407, 1800.0, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+
+Evaluando serie temporal del seed inicial con t_pk fijo...
+Evaluando serie temporal del best BBO con t_pk fijo...
+
+Métricas seed inicial con t_pk fijo:
+  χ²_A      = 0.06688614
+  χ²_ϕ      = 0.27248630
+  χ²_total  = 0.33937243
+  RMSE_A    = 0.61454970 dB
+  RMSE_ϕ    = 18.30324965 deg
+
+Métricas best BBO con t_pk fijo:
+  χ²_A      = 0.06859313
+  χ²_ϕ      = 0.24316969
+  χ²_total  = 0.31176283
+  RMSE_A    = 0.62234223 dB
+  RMSE_ϕ    = 17.29062119 deg
+
+Archivo HDF5 guardado: new-perturbation-inversion_F3_nexp_oldASLS_BG13341497_FIXED_TPK_rel10_seed_from_15341092_results_15373069.h5
+Inversión terminada: F3+nexp con t_pk fijo desde datos, 6 parámetros libres y seed cargado desde la primera tanda FIXED_TPK_rel10.

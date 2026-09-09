@@ -1,0 +1,15 @@
+# Minimal Python dependencies inferred from the curated notebooks and Slurm preflight checks.
+# Exact historical Python package versions were not preserved in the supplied materials.
+numpy
+pandas
+scipy
+matplotlib
+h5py
+scikit-learn
+pybaselines
+astropy
+lmfit
+netCDF4
+IPython
+jupyter
+chaosmagpy

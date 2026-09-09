@@ -1,0 +1,176 @@
+================================================================================
+[RUN] Forward-only ground diagnostic — FIRI hardcoded + ocean BBO-2
+[RUN] Fixed target offsets: +19 dB, -210 deg for every case
+[RUN] Ground cases: ocean10, ocean7_goodsoil3, ocean6_goodsoil4, ocean5_goodsoil5
+[RUN] SLURM_JOB_ID=16835254
+[RUN] SLURM_SUBMIT_DIR=/orcd/home/002/jpvelasq/basefolder_JP
+[RUN] SLURM_CPUS_PER_TASK=64
+[RUN] JULIA_NUM_THREADS=64
+[RUN] OPENBLAS_NUM_THREADS=1
+[RUN] Script=generate_ground_forward_diagnostic_FIRI_oceanBBO2_17pts_FIXED.jl
+[RUN] Target=/orcd/home/002/jpvelasq/basefolder_JP/real_whittaker_selected_background_16_22_for_inversion.h5
+[RUN] Ocean BBO-2=/orcd/home/002/jpvelasq/basefolder_JP/new-real-background-inversion_from_sep_16_22_restart15_results_12976567.h5
+[RUN] References=/orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325
+================================================================================
+Geodesic Distance from WWVB to PLO: 6568.28 km
+Geodesic Distance from WWVB to PIU: 5659.0 km
+Geodesic Distance from NAA to PLO: 6568.28 km
+Geodesic Distance from NAA to PIU: 5659.0 km
+Initial time: 2008-01-10T10:00:00+00:00
+Scenario defined.
+Datetime range: from 2008-01-10 10:00:00 UTC to 2008-01-11 10:00:00 UTC with a length of 289.
+================================================================================================
+Forward-only ground diagnostic: FIRI seed and ocean BBO-2
+  root directory       = /orcd/home/002/jpvelasq/basefolder_JP
+  target HDF5          = /orcd/home/002/jpvelasq/basefolder_JP/real_whittaker_selected_background_16_22_for_inversion.h5
+  ocean BBO-2 HDF5     = /orcd/home/002/jpvelasq/basefolder_JP/new-real-background-inversion_from_sep_16_22_restart15_results_12976567.h5
+  reference directory  = /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325
+  output HDF5          = /orcd/home/002/jpvelasq/basefolder_JP/outputs_ground_forward_diagnostic_FIRI_oceanBBO2_17pts/ground_forward_diagnostic_FIRI_oceanBBO2_17pts_16835254.h5
+  SLURM job ID         = 16835254
+  Julia threads (main) = 64
+  BLAS threads (main)  = 1
+================================================================================================
+
+Evaluation grid:
+  first time = 2008-03-25T18:00:00+00:00
+  last time  = 2008-03-25T22:00:00+00:00
+  cadence    = 15 min
+  n_times    = 17
+
+Fixed Whittaker target:
+  source time range = 2008-03-25T16:00:00+00:00 -> 2008-03-25T22:00:00+00:00
+  selected indices  = [121, 136, 151, 166, 181, 196, 211, 226, 241, 256, 271, 286, 301, 316, 331, 346, 361]
+  amplitude offset  = 19.0 dB
+  phase offset      = -210.0 deg
+  target scale A    = 57.95725587649158
+  target scale phi  = 2227.2777390645265
+
+Geometry:
+  transmitter             = NAA / tx2
+  receiver sampler        = rx (same object used by background inversion)
+  geolinspace npoints arg = 19
+  effective path points   = 21
+  waveguide segments      = 10
+  path length [km]        = 6399.376402
+  segment lengths [km]    = [639.93764, 639.93764, 639.93764, 639.93764, 639.93764, 639.93764, 639.93764, 639.93764, 639.93764, 639.93764]
+  segment starts [km]     = [0.0, 639.93764, 1279.87528, 1919.81292, 2559.750561, 3199.688201, 3839.625841, 4479.563481, 5119.501121, 5759.438761]
+  segment midpoints [km]  = [319.96882, 959.90646, 1599.8441, 2239.781741, 2879.719381, 3519.657021, 4159.594661, 4799.532301, 5439.469941, 6079.407581]
+
+Ground configurations, ordered TX -> RX:
+  ocean10              = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+  ocean7_goodsoil3     = [10, 10, 10, 10, 10, 10, 10, 7, 7, 7]
+  ocean6_goodsoil4     = [10, 10, 10, 10, 10, 10, 7, 7, 7, 7]
+  ocean5_goodsoil5     = [10, 10, 10, 10, 10, 7, 7, 7, 7, 7]
+Loaded phase reference for ocean10: /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ground_10_10wg_20080325.jld2
+Loaded phase reference for ocean7_goodsoil3: /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean7_goodsoil3_10wg_20080325.jld2
+Loaded phase reference for ocean6_goodsoil4: /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean6_goodsoil4_10wg_20080325.jld2
+Loaded phase reference for ocean5_goodsoil5: /orcd/home/002/jpvelasq/basefolder_JP/outputs_reference_efield_firi_10waveguides_13ground_cases_20080325/reference-efield-firi_ocean5_goodsoil5_10wg_20080325.jld2
+
+Ionospheric states:
+  FIRI_hardcoded
+    h' coefficients   = [70.93157100832119, 0.02362601104815065, 0.6309437477618507, -0.1172361567740213, 1.781775057195727, 0.1798626527735148, -0.7183163078548129, -0.07238044623458698, 0.29364907405058155]
+    beta coefficients = [0.383338637221558, -0.0020295433454318493, 0.03247156108586324, 0.006262402864343245, -0.03719773552870514, -0.0038082733033810846]
+    source             = hardcoded_in_script
+  ocean_BBO2_12976567
+    h' coefficients   = [71.81485872893, 0.021755840626906497, 0.5523076539746147, -0.09944602287133165, 1.4390981661505866, 0.1777363257765004, -0.6614023677307742, -0.08014087022150387, 0.2781622992064208]
+    beta coefficients = [0.35981348097591637, -0.0017464051504281278, 0.03261941459052381, 0.006866072161654977, -0.03418296353669556, -0.004122479164381912]
+    source             = /orcd/home/002/jpvelasq/basefolder_JP/new-real-background-inversion_from_sep_16_22_restart15_results_12976567.h5
+  ocean BBO-2 verified against best_candidate = true
+
+Computed Wait–Spies parameter ranges:
+  h' [km]      = 70.97705095340142 -> 78.26693198476687
+  beta [km^-1] = 0.28057187115227555 -> 0.3904353973239184
+
+Parallel forward evaluation:
+  independent jobs = 136
+  allocated CPUs   = 64
+  workers requested = 63
+
+Worker audit:
+  (worker_id = 2, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 3, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 4, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 5, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 6, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 7, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 8, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 9, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 10, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 11, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 12, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 13, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 14, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 15, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 16, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 17, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 18, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 19, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 20, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 21, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 22, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 23, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 24, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 25, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 26, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 27, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 28, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 29, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 30, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 31, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 32, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 33, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 34, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 35, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 36, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 37, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 38, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 39, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 40, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 41, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 42, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 43, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 44, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 45, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 46, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 47, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 48, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 49, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 50, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 51, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 52, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 53, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 54, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 55, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 56, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 57, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 58, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 59, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 60, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 61, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 62, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 63, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+  (worker_id = 64, julia_threads = 1, blas_threads = 1, n_states = 2, n_times = 17, n_segments = 10, n_ground_cases = 4, working_directory = "/orcd/home/002/jpvelasq/basefolder_JP", active_project = "/orcd/home/002/jpvelasq/basefolder_JP/Project.toml")
+
+All 136 forward jobs completed in 253.327 s.
+
+Phase branch audit:
+  FIRI_hardcoded         / ocean10              : cycles=  1, shift=   360.0 deg, first-time ref-model=  -8.6712 deg
+  FIRI_hardcoded         / ocean7_goodsoil3     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -7.3643 deg
+  FIRI_hardcoded         / ocean6_goodsoil4     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -7.9127 deg
+  FIRI_hardcoded         / ocean5_goodsoil5     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -7.0890 deg
+  ocean_BBO2_12976567    / ocean10              : cycles=  1, shift=   360.0 deg, first-time ref-model=  -3.8989 deg
+  ocean_BBO2_12976567    / ocean7_goodsoil3     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -2.6733 deg
+  ocean_BBO2_12976567    / ocean6_goodsoil4     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -3.0682 deg
+  ocean_BBO2_12976567    / ocean5_goodsoil5     : cycles=  1, shift=   360.0 deg, first-time ref-model=  -2.3611 deg
+
+================================================================================================
+FORWARD DIAGNOSTIC COMPLETED SUCCESSFULLY
+  output HDF5       = /orcd/home/002/jpvelasq/basefolder_JP/outputs_ground_forward_diagnostic_FIRI_oceanBBO2_17pts/ground_forward_diagnostic_FIRI_oceanBBO2_17pts_16835254.h5
+  states            = ["FIRI_hardcoded", "ocean_BBO2_12976567"]
+  ground cases      = ["ocean10", "ocean7_goodsoil3", "ocean6_goodsoil4", "ocean5_goodsoil5"]
+  evaluation times  = 17
+  forward jobs      = 136
+  elapsed [s]       = 253.327
+  optimization      = none
+  fixed target      = +19 dB, -210 deg for every case
+================================================================================================

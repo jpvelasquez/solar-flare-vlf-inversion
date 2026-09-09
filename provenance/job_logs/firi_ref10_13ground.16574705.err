@@ -1,0 +1,7 @@
+/home/jpvelasq/basefolder_JP/.julia_depot/conda/3/x86_64/lib/python3.12/site-packages/h5py/__init__.py:36: UserWarning: h5py is running against HDF5 1.14.6 when it was built against 1.14.3, this may cause problems
+  _warn(("h5py is running against HDF5 {0} when it was built against {1}, "
+/home/jpvelasq/basefolder_JP/.julia_depot/conda/3/x86_64/lib/python3.12/site-packages/hdf5storage/utilities.py:44: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import parse_version
+/home/jpvelasq/basefolder_JP/.julia_depot/conda/3/x86_64/lib/python3.12/site-packages/chaosmagpy/plot_utils.py:33: UserWarning: Could not import Matplotlib. Plotting methods and functions will raise a NameError.
+  warnings.warn('Could not import Matplotlib. Plotting methods and '
+[ Info: Loading CHAOS-7.11.mat

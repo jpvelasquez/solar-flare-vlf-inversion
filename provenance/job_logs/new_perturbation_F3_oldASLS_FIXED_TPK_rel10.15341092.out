@@ -1,0 +1,178 @@
+[OK] Preflight: Threads=64  BLAS=1
+[OK] BACKGROUND_H5=new-real-background-inversion-bbo_from_old_asls_restart_results_13341497.h5
+[RUN] SLURM_CPUS_PER_TASK=64  JULIA_NUM_THREADS=64
+[RUN] Fixed t_pk from data; BBO optimizes 6 parameters only; relative bounds ±10%.
+Geodesic Distance from WWVB to PLO: 6568.28 km
+Geodesic Distance from WWVB to PIU: 5659.0 km
+Geodesic Distance from NAA to PLO: 6568.28 km
+Geodesic Distance from NAA to PIU: 5659.0 km
+Initial time: 2008-01-10T10:00:00+00:00
+Scenario defined.
+Datetime range: from 2008-01-10 10:00:00 UTC to 2008-01-11 10:00:00 UTC with a length of 289.
+Number of waveguide segments: 10
+17
+2008-03-25T18:00:00+00:00  →  índice 1
+2008-03-25T18:15:00+00:00  →  índice 901
+2008-03-25T18:30:00+00:00  →  índice 1801
+2008-03-25T18:45:00+00:00  →  índice 2701
+2008-03-25T19:00:00+00:00  →  índice 3601
+2008-03-25T19:15:00+00:00  →  índice 4501
+2008-03-25T19:30:00+00:00  →  índice 5401
+2008-03-25T19:45:00+00:00  →  índice 6301
+2008-03-25T20:00:00+00:00  →  índice 7201
+2008-03-25T20:15:00+00:00  →  índice 8101
+2008-03-25T20:30:00+00:00  →  índice 9001
+2008-03-25T20:45:00+00:00  →  índice 9901
+2008-03-25T21:00:00+00:00  →  índice 10801
+2008-03-25T21:15:00+00:00  →  índice 11701
+2008-03-25T21:30:00+00:00  →  índice 12601
+2008-03-25T21:45:00+00:00  →  índice 13501
+2008-03-25T22:00:00+00:00  →  índice 14401
+Verificación OK: reconstruction/*_coeffs coincide con optimization/best_candidate.
+Background h/beta cargado desde: new-real-background-inversion-bbo_from_old_asls_restart_results_13341497.h5
+coeffs_h_alb = [71.20241357159209, 0.021055197162810572, 0.6743012994492561, -0.11333325887009565, 1.7214683989334296, 0.1731868108849921, -0.716065900242031, -0.07029719522256873, 0.3271500853631088]
+coeffs_β_alb = [0.3843328445937041, -0.0021913820132952446, 0.033890681463773185, 0.005838896816599224, -0.04258953800948821, -0.003800062839568533]
+
+================================================================================
+t_pk fijo estimado desde datos detrended
+================================================================================
+  k_pk                  = 5
+  instante pico usado   = 2008-03-25T19:00:00+00:00
+  t₀                    = 2008-03-25T18:30:00+00:00
+  t_pk_fixed            = 1800.0 s respecto a t₀
+  score_pk[k_pk]        = 5.17462030
+  ΔA_pk[k_pk]           = 3.84917781 dB
+  Δϕ_pk[k_pk]           = 94.61781953 deg
+  σA_pk                 = 1.00190809 dB
+  σϕ_pk                 = 27.29459263 deg
+================================================================================
+
+Escalas de normalización: scale_A=9.59901851e+01, scale_phi=2.09006920e+04
+Parámetros iniciales libres [amp, tau_u, tau_d, eps, z0, hz]: [20.0, 190.5781464, 1248.558552, 789.685128, 85.0, 10.0]
+Parámetros iniciales completos [amp, t_pk_fixed, tau_u, tau_d, eps, z0, hz]: [20.0, 1800.0, 190.5781464, 1248.558552, 789.685128, 85.0, 10.0]
+SearchRange 6D:
+  amp: (18.0, 22.0)
+  tau_u_s: (171.52033176, 209.63596104)
+  tau_d_s: (1123.7026968, 1373.4144072000001)
+  eps_s: (710.7166152, 868.6536408000001)
+  z0_km: (76.5, 93.50000000000001)
+  hz_km: (9.0, 11.0)
+
+================================================================================
+Iniciando BBO 6D con t_pk fijo
+================================================================================
+  MaxTime       = 36000.0 s
+  NumDimensions = 6
+  NThreads      = 63
+  t_pk_fixed    = 1800.0 s
+================================================================================
+
+Norm. error_A: 0.07853682126526938, norm. error_ϕ: 0.3793203928473694, total: 0.4578572141126388
+Starting optimization with optimizer BlackBoxOptim.DXNESOpt{Float64, RandomBound{ContinuousRectSearchSpace}}
+0.00 secs, 0 evals, 0 steps
+σ=1.0 η[x]=1.0 η[σ]=0.0 η[B]=0.0 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.13118751520181607, norm. error_ϕ: 0.4985586326805701, total: 0.6297461478823861
+Norm. error_A: 0.11216299606883028, norm. error_ϕ: 0.4430714584648532, total: 0.5552344545336835
+Norm. error_A: 0.1270795566071585, norm. error_ϕ: 0.48738684023678264, total: 0.6144663968439411
+Norm. error_A: 0.12125690299751192, norm. error_ϕ: 0.47292066368199864, total: 0.5941775666795106
+Norm. error_A: 0.11556648687650847, norm. error_ϕ: 0.4549527496354794, total: 0.5705192365119879
+Norm. error_A: 0.1347591160168369, norm. error_ϕ: 0.5068657233733271, total: 0.641624839390164
+Norm. error_A: 0.12189375218564684, norm. error_ϕ: 0.46807535698559893, total: 0.5899691091712458
+Norm. error_A: 0.10885639525663561, norm. error_ϕ: 0.4358769031903819, total: 0.5447332984470176
+4882.79 secs, 8 evals, 1 steps, fitness=0.544733298
+σ=1.0269502235615786 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.12552128502065796, norm. error_ϕ: 0.47643264759029547, total: 0.6019539326109534
+Norm. error_A: 0.1134806849277836, norm. error_ϕ: 0.4446167352824875, total: 0.5580974202102711
+Norm. error_A: 0.10653042825308676, norm. error_ϕ: 0.4266258112858534, total: 0.5331562395389402
+Norm. error_A: 0.11681043266686093, norm. error_ϕ: 0.45884238701489427, total: 0.5756528196817552
+Norm. error_A: 0.11639248545258536, norm. error_ϕ: 0.4588305092009127, total: 0.575222994653498
+Norm. error_A: 0.1075721724858882, norm. error_ϕ: 0.4269022839003629, total: 0.5344744563862511
+Norm. error_A: 0.11018410027402638, norm. error_ϕ: 0.44064979949973576, total: 0.5508338997737622
+Norm. error_A: 0.09884072037126349, norm. error_ϕ: 0.4102546962331745, total: 0.509095416604438
+9876.57 secs, 16 evals, 2 steps, fitness=0.509095417
+σ=1.1215567684798853 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.7763568394002505e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.10639627481344305, norm. error_ϕ: 0.42569661603018266, total: 0.5320928908436258
+Norm. error_A: 0.11292649715482093, norm. error_ϕ: 0.4519661930737559, total: 0.5648926902285768
+Norm. error_A: 0.11458338673950409, norm. error_ϕ: 0.4480196787139161, total: 0.5626030654534202
+Norm. error_A: 0.0943970760656588, norm. error_ϕ: 0.3878377993376443, total: 0.48223487540330306
+Norm. error_A: 0.11786777305731087, norm. error_ϕ: 0.46059311047242285, total: 0.5784608835297337
+Norm. error_A: 0.09238725912626139, norm. error_ϕ: 0.39115382848317937, total: 0.48354108760944076
+Norm. error_A: 0.09040425185679607, norm. error_ϕ: 0.3823960040185183, total: 0.4728002558753144
+Norm. error_A: 0.10144968931377069, norm. error_ϕ: 0.4130299407540516, total: 0.5144796300678223
+15100.52 secs, 24 evals, 3 steps, fitness=0.472800256
+σ=1.0304604151777392 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=8.881784197001252e-16 |path|=NaN speed=NaN
+Norm. error_A: 0.10459995581171207, norm. error_ϕ: 0.4240702479543041, total: 0.5286702037660161
+Norm. error_A: 0.09490246584926616, norm. error_ϕ: 0.38920410225568786, total: 0.484106568104954
+Norm. error_A: 0.09053310784978189, norm. error_ϕ: 0.38401488920808957, total: 0.47454799705787143
+Norm. error_A: 0.08255352518739915, norm. error_ϕ: 0.35289142066724677, total: 0.43544494585464594
+Norm. error_A: 0.08198930957001528, norm. error_ϕ: 0.3517778204765931, total: 0.4337671300466084
+Norm. error_A: 0.10484340400992616, norm. error_ϕ: 0.423721923109727, total: 0.5285653271196532
+Norm. error_A: 0.08256270619451021, norm. error_ϕ: 0.3519001384025949, total: 0.4344628445971051
+Norm. error_A: 0.10508481773125856, norm. error_ϕ: 0.4257212309961658, total: 0.5308060487274244
+20296.69 secs, 32 evals, 4 steps, fitness=0.433767130
+σ=1.057032915895988 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.3322676295501878e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.0941050750638262, norm. error_ϕ: 0.3843792447780699, total: 0.4784843198418961
+Norm. error_A: 0.07986386950736904, norm. error_ϕ: 0.34009379385883004, total: 0.4199576633661991
+Norm. error_A: 0.0862255724832616, norm. error_ϕ: 0.36790039703095884, total: 0.45412596951422046
+Norm. error_A: 0.07704528023400908, norm. error_ϕ: 0.324678710183121, total: 0.4017239904171301
+Norm. error_A: 0.09680583244264267, norm. error_ϕ: 0.402044036373142, total: 0.4988498688157847
+Norm. error_A: 0.0744151284103124, norm. error_ϕ: 0.32660502308082273, total: 0.4010201514911351
+Norm. error_A: 0.07313067050877284, norm. error_ϕ: 0.3122509791479364, total: 0.3853816496567093
+Norm. error_A: 0.09041244257491413, norm. error_ϕ: 0.3857856699289942, total: 0.4761981125039083
+25661.89 secs, 40 evals, 5 steps, fitness=0.385381650
+σ=1.2586230056223073 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.3322676295501878e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.07950884289091836, norm. error_ϕ: 0.3379064451767335, total: 0.4174152880676519
+Norm. error_A: 0.07677704453054829, norm. error_ϕ: 0.33450514423544686, total: 0.41128218876599515
+Norm. error_A: 0.07850599422440306, norm. error_ϕ: 0.3345676468752031, total: 0.41307364109960615
+Norm. error_A: 0.07126397030217996, norm. error_ϕ: 0.30537323726238796, total: 0.3766372075645679
+Norm. error_A: 0.07018788015491004, norm. error_ϕ: 0.30262467974218454, total: 0.3728125598970946
+Norm. error_A: 0.06876751666582408, norm. error_ϕ: 0.28047589033077963, total: 0.3492434069966037
+Norm. error_A: 0.07218910739428461, norm. error_ϕ: 0.30704063857422936, total: 0.379229745968514
+Norm. error_A: 0.08454663323061246, norm. error_ϕ: 0.36629011374038456, total: 0.450836746970997
+31160.05 secs, 48 evals, 6 steps, fitness=0.349243407
+σ=1.3880529447792298 η[x]=1.0 η[σ]=1.4 η[B]=0.044444444444444446 |tr(ln_B)|=1.3322676295501878e-15 |path|=NaN speed=NaN
+Norm. error_A: 0.07980947196141802, norm. error_ϕ: 0.3370438011349973, total: 0.41685327309641534
+Norm. error_A: 0.06751483481821391, norm. error_ϕ: 0.2765703973572799, total: 0.3440852321754938
+Norm. error_A: 0.06683473285937136, norm. error_ϕ: 0.27255333063912546, total: 0.3393880634984968
+Norm. error_A: 0.06696285155175331, norm. error_ϕ: 0.2725777511920352, total: 0.3395406027437885
+Norm. error_A: 0.07488656713319723, norm. error_ϕ: 0.3184272027882452, total: 0.39331376992144246
+Norm. error_A: 0.07433494363512097, norm. error_ϕ: 0.31511725269996177, total: 0.38945219633508277
+Norm. error_A: 0.07730079211783934, norm. error_ϕ: 0.32505156771227256, total: 0.4023523598301119
+
+Optimization stopped after 7 steps and 36842.67 seconds
+Termination reason: Max time (36000.0 s) reached
+Steps per second = 0.00
+Function evals per second = 0.00
+Improvements/step = NaN
+Total function evaluations = 56
+
+
+Best candidate found: [20.4582, 193.087, 1262.79, 778.06, 77.5675, 10.5442]
+
+Fitness: 0.339388063
+
+Mejor solución libre encontrada [amp, tau_u, tau_d, eps, z0, hz]: [20.458218058965407, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+Mejor solución completa [amp, t_pk_fixed, tau_u, tau_d, eps, z0, hz]: [20.458218058965407, 1800.0, 193.0873774010677, 1262.794315949742, 778.0599152823686, 77.56753203059367, 10.54422601941637]
+Mejor error encontrado: 0.3393880634984968
+Parámetros iniciales libres: [20.0, 190.5781464, 1248.558552, 789.685128, 85.0, 10.0]
+Parámetros iniciales completos: [20.0, 1800.0, 190.5781464, 1248.558552, 789.685128, 85.0, 10.0]
+
+Evaluando serie temporal del seed inicial con t_pk fijo...
+Evaluando serie temporal del best BBO con t_pk fijo...
+
+Métricas seed inicial con t_pk fijo:
+  χ²_A      = 0.12142228
+  χ²_ϕ      = 0.47076007
+  χ²_total  = 0.59218235
+  RMSE_A    = 0.82801488 dB
+  RMSE_ϕ    = 24.05778727 deg
+
+Métricas best BBO con t_pk fijo:
+  χ²_A      = 0.06673299
+  χ²_ϕ      = 0.27277073
+  χ²_total  = 0.33950373
+  RMSE_A    = 0.61384574 dB
+  RMSE_ϕ    = 18.31280025 deg
+
+Archivo HDF5 guardado: new-perturbation-inversion_F3_nexp_oldASLS_BG13341497_FIXED_TPK_rel10_results_15341092.h5
+Inversión terminada: F3+nexp con t_pk fijo desde datos y 6 parámetros libres.
