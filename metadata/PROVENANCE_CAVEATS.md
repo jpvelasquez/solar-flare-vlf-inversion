@@ -4,7 +4,7 @@
 
 The canonical ASLS file in this repository is `data/background_separation/datos_asls_full-v3.h5`. It is the version that matches the targets stored in the final ASLS inversion chain.
 
-The available local notebook `notebooks/preprocessing/PyBaselines-data-Copy1.ipynb` is a later descendant of the notebook used to create that file. The user reports that the output name was changed from `v3` to `v4` to avoid overwriting the previous HDF5. The notebook was also subsequently edited, so its present saved state should be treated as method lineage rather than an exact historical execution snapshot. The canonical HDF5 itself, the downstream inversion outputs, and the Engaging logs are preserved.
+The available local notebook `notebooks/preprocessing/PyBaselines-data-Copy1.ipynb` is a later descendant of the notebook used to create that file. The output name was later changed from `v3` to `v4` to avoid overwriting the previous HDF5. The notebook was also subsequently edited, so its present saved state should be treated as method lineage rather than an exact historical execution snapshot. The canonical HDF5 itself, the downstream inversion outputs, and the Engaging logs are preserved.
 
 ## ASLS background restart job 13341497
 
@@ -22,6 +22,10 @@ The reconstruction is explicitly labeled and is not claimed to be a byte-identic
 ## Slurm launchers
 
 Several `.sbatch` files were reused and edited between runs. The authoritative mapping between jobs, scripts, and output HDF5 files is `metadata/CANONICAL_RUNS.tsv`, supported by `provenance/job_logs/`. Launcher snapshots are retained for cluster configuration and execution context but should not be used alone to infer which code revision produced a specific job.
+
+## Historical filesystem paths and scheduler metadata
+
+Canonical scripts, Slurm launcher snapshots, and job logs preserve absolute filesystem paths and scheduler metadata from the original local and MIT Engaging environments. These entries are retained as provenance and should not be interpreted as portable defaults. Users reproducing the workflows should adapt filesystem paths, account-specific scheduler settings, and notification settings to their own environment.
 
 ## Python environment
 
