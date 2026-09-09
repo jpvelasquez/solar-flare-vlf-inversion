@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software and research compendium, please cite this repository and the accompanying scientific article."
+title: "Data and software for estimating electron density enhancements caused by solar flares using VLF time series"
+type: software
+authors:
+  - family-names: "Velásquez Ormaeche"
+    given-names: "Juan Pablo"
+    affiliation: "Comisión Nacional de Investigación y Desarrollo Aeroespacial (CONIDA)"
+repository-code: "https://github.com/jpvelasquez/solar-flare-vlf-inversion"
+license: MIT
+version: "1.0.0"
+keywords:
+  - VLF
+  - ionospheric D region
+  - solar flares
+  - electron density
+  - inverse problems
+  - LongwaveModePropagator
+  - Wait-Spies
+  - SAVNET
+  - reproducible research
+abstract: >-
+  Reproducibility package containing the code, curated notebooks,
+  observational and synthetic data products, inversion outputs, and
+  provenance records used to reconstruct solar-flare-driven D-region
+  electron-density enhancements from VLF amplitude and phase time series
+  on the NAA-PLO propagation path for the 25 March 2008 event.
