@@ -65,7 +65,7 @@ See `metadata/CANONICAL_RUNS.tsv` for the canonical job IDs, scripts, and output
 
 ## Integrity
 
-`metadata/SHA256SUMS.txt` contains SHA-256 hashes for every file in the package except the checksum file itself. `metadata/MANIFEST.tsv` lists file paths, sizes, hashes, and top-level categories.
+`metadata/SHA256SUMS.txt` contains SHA-256 hashes for all package files except `metadata/SHA256SUMS.txt` itself and `metadata/MANIFEST.tsv`. `metadata/MANIFEST.tsv` lists all package files except itself, including the checksum file, with paths, sizes, hashes, and top-level categories.
 
 ## Provenance caveats
 
@@ -86,4 +86,4 @@ In particular:
 - GOES-10 XRS data under `data/goes/` originate from NOAA/NCEI and retain their original provenance; they are not covered by the MIT software license.
 - Third-party packages and scientific models retain their upstream licenses and citation requirements.
 
-A `CITATION.cff` file and final repository DOI metadata should be added after the public archive/release record is created.
+`CITATION.cff` provides the current software/research-compendium citation metadata. The repository DOI and the preferred citation to the accompanying scientific article will be added after the public Zenodo archive/release record is created.
