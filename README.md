@@ -78,12 +78,12 @@ The canonical numerical outputs for both chains are included. For job 13341497, 
 
 ## Licensing and citation
 
-Original software developed for this project is released under the **MIT License**; see `LICENSE`. Licensing and data-use terms for external observational data, third-party software, and derived numerical products are documented separately in `LICENSES.md`.
+Original software developed for this project is released under the **MIT License**; see `LICENSE`. Author-generated derived research products (including the HDF5/JLD2 outputs, reconstructed series, synthetic-analysis products, and rendered figures) are licensed under **CC BY 4.0** unless otherwise stated. External observational data, third-party software, and scientific models retain their original provenance, licenses, and data-use terms. See `LICENSES.md` for the exact scope of each license.
 
 In particular:
 
-- `data/savnet/PLO-20080325.fits` originates from SAVNET/Open VLF. The official Open VLF registry states that there are no restrictions on the use of these data. The SAVNET file is not covered by this repository's MIT software license.
-- GOES-10 XRS data under `data/goes/` originate from NOAA/NCEI and retain their original provenance; they are not covered by the MIT software license.
+- `data/savnet/PLO-20080325.fits` originates from SAVNET/Open VLF. The official Open VLF registry states that there are no restrictions on the use of these data. The SAVNET file is not covered by this repository's MIT or CC BY 4.0 licenses.
+- GOES-10 XRS data under `data/goes/` originate from NOAA/NCEI and retain their original provenance; they are not covered by this repository's MIT or CC BY 4.0 licenses.
 - Third-party packages and scientific models retain their upstream licenses and citation requirements.
 
 `CITATION.cff` provides the current software/research-compendium citation metadata. The repository DOI and the preferred citation to the accompanying scientific article will be added after the public Zenodo archive/release record is created.
