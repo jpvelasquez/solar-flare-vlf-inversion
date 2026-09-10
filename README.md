@@ -2,6 +2,18 @@
 
 This repository bundles the data, code, notebooks, inversion outputs, and provenance records used for the NAA--PLO solar-flare reconstruction study centered on the 25 March 2008 M1.7 flare.
 
+## Archived release and DOI
+
+The manuscript-associated release is **v1.0.0**, archived in Zenodo with version-specific DOI:
+
+- **10.5281/zenodo.22693576**
+
+The Zenodo concept DOI representing all versions of this research compendium is:
+
+- **10.5281/zenodo.22693575**
+
+For exact reproducibility of the manuscript results, cite the version-specific DOI above.
+
 ## Contents
 
 - `data/savnet/`: SAVNET raw data for 25 March 2008 only.
@@ -86,4 +98,4 @@ In particular:
 - GOES-10 XRS data under `data/goes/` originate from NOAA/NCEI and retain their original provenance; they are not covered by this repository's MIT or CC BY 4.0 licenses.
 - Third-party packages and scientific models retain their upstream licenses and citation requirements.
 
-`CITATION.cff` provides the current software/research-compendium citation metadata. The repository DOI and the preferred citation to the accompanying scientific article will be added after the public Zenodo archive/release record is created.
+`CITATION.cff` provides the software/research-compendium citation metadata for release `v1.0.0`, including its Zenodo DOI. The preferred citation to the accompanying scientific article can be added once the article has its final bibliographic metadata.
