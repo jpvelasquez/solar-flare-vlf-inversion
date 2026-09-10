@@ -1,14 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this software and research compendium, please cite this repository and the accompanying scientific article."
+message: "If you use this software and research compendium, please cite this archived release and the accompanying scientific article."
 title: "Data and software for estimating electron density enhancements caused by solar flares using VLF time series"
 type: software
 authors:
   - family-names: "Velásquez Ormaeche"
     given-names: "Juan Pablo"
     affiliation: "Comisión Nacional de Investigación y Desarrollo Aeroespacial (CONIDA)"
+doi: "10.5281/zenodo.22693576"
 repository-code: "https://github.com/jpvelasquez/solar-flare-vlf-inversion"
+repository-artifact: "https://doi.org/10.5281/zenodo.22693576"
 license: MIT
 version: "1.0.0"
+date-released: 2026-09-10
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22693575"
+    description: "Concept DOI for all versions of this research compendium"
 keywords:
   - VLF
   - ionospheric D region
